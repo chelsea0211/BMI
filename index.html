@@ -6,9 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> 
 </head>
 <body>
-   
+    <div class="wrap">
+        <div class="inputData">
+            <img src="images/BMICLogo.png" alt="BMILogo">
+            <form class="data">
+                <ul>
+                    <li>
+                        <label class="item">身高 cm</label>
+                        <input type="number" class="bodyHeight"  placeholder="請輸入身高">
+                        <label class="emptyHeight hidden">請輸入身高 !</label>
+                    </li>
+                    <li>
+                        <label class="item">體重 kg</label>
+                        <input type="number" class="bodyWeight"
+                         placeholder="請輸入體重">
+                        <label class="emptyWeight hidden">請輸入體重 !</label>
+                    </li>
+                </ul>
+            </form>
+          
+                <input type="button" class="seeResult" value="計算結果">
+                <div class="status">
+                    <div class="statusPanel search">
+                        <h3>20.10</h3>
+                        <p>BMI</p>
+                        <div class="refreshBtn">
+                            <img src="/images/icons_loop.png" alt="">
+                        </div>
+                    </div>
+                    <div class="statusText"></div>
+                </div>
+            
+        </div>
+        <div class="content">
+            <h2>BMI 記錄</h2>
+            <ul class="recordList">
+               <!--  <li class="box ideal">
+                    <h3>理想</h3>             
+                    <div><small>BMI</small><span>20.90</span></div>
+                    <div><small>Weight</small><span>70kg</span></div>
+                    <div><small>Height</small><span>180cm</span></div>
+                    <div><small>20-08-201</small></div>
+                </li> -->
+                
+            </ul>
+        </div>
+        <div class="footer">
+            
+            <img class="footImg" src="images/flex..png">
+        </div>
+    </div>
     <script src="js/all.js"></script>
 </body>
 </html>
