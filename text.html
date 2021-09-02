@@ -10,37 +10,42 @@
 </head>
 <body>
     <div>
-        <h1>innerHTML、innerText、textContent、outerHTML和value的区别</h1>
-        <p id="content-wrapper">你是谁？
-          <span>这是一个内嵌span测试</span>
-        </p>
-        <input id="name-input" type="text" placeholder="输入你的名字" value="xk">
-        <button id="send-btn">发送</button>
-        <script>
-          let contentWrapper = document.getElementById("content-wrapper")
-          let nameInput = document.getElementById("name-input")
-          let sendBtn = document.getElementById("send-btn")
         
-          console.log("文本p的innerHTML是：" + contentWrapper.innerHTML)
-          console.log("文本p的innerText是：" + contentWrapper.innerText)
-          console.log("文本p的textContent是：" + contentWrapper.textContent)
-          console.log("文本p的outerHTML是：" + contentWrapper.outerHTML)
-          console.log("文本p的value是：" + contentWrapper.value)
-        
-          console.log("input的innerHTML是：" + nameInput.innerHTML)
-          console.log("input的innerText是：" + nameInput.innerText)
-          console.log("input的textContent是：" + nameInput.textContent)
-          console.log("input的outerHTML是：" + nameInput.outerHTML)
-          console.log("input的value是：" + nameInput.value)
-        
-          console.log("按钮button的innerHTML是：" + sendBtn.innerHTML)
-          console.log("按钮button的innerText是：" + sendBtn.innerText)
-          console.log("按钮button的textContent是：" + sendBtn.textContent)
-          console.log("按钮button的outerHTML是：" + sendBtn.outerHTML)
-          console.log("按钮button的value是：" + sendBtn.value)
-        </script>
-               
+        <h3>基本資料</h3>
+        <form>
+        <label for="nameTxt" class="nameLabel">名字</label>
+        <input type="text"  id = "nameTxt" placeholder="輸入姓名">
+        <br>
+        <img src="images/icons_loop.png" class ="loop" alt="">
+
+        <br>
+         <select name="location" id="location">
+            <option value="">請下拉</option>
+            <option value="Taipei">台北市</option>
+            <option value="Tainan">台南市</option>
+        </select>
+        <input type="button" value="送出" class="btn">
+        </form>
+        <label id="show"></label>
+        <label id="show2"></label>
     </div>
-    <script src="js/all.js"></script>
+    <script>
+        let name = document.getElementById('nameTxt');
+        let btn = document.querySelector('.btn');
+        let locations = document.getElementById('location');
+        let showTxt = document.getElementById('show');
+        let showTxt2 = document.getElementById('show2');
+        btn.addEventListener('click',send,false);
+        locations.addEventListener('change',locationChange,false);
+        
+       function send(e){
+           
+            e.preventDefault();
+            showTxt2.textContent = name.value;
+        } 
+       function locationChange(e) {
+           showTxt.textContent = `<label style="color:Red">${locations.value}</label>`;
+        } 
+    </script>
 </body>
 </html>

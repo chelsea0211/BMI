@@ -52,53 +52,52 @@ table {
 	display:Flex;
   
 }
-.wrap{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin: 50px auto;
-	border:1px solid black;
-	position: relative;
-}
-.round{
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background-color: green;
-	position: absolute;
-	right:0;
-	bottom:30px;
+h3{
+	-moz-animation-duration: 5s;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+
+	-moz-animation-name:slide;
+	-webkit-animation-name:slide;
+	animation-name: slide;
 
 
-}
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 
-.aB img{
-	-moz-transition: all .6;  
-	-webkit-transition: all .6;  
-	-ms-transition: all .6;
-	transition: all .6; 
-	margin:20px;
 }
-.aB:hover img{
+@keyframes slide {
+	from {
+		margin-left:100%;
+		font-size:20px;
+	  }
 	
-	-moz-transform: rotate(1turn);
-	-webkit-transform: rotate(1turn);
-	-ms-transform: rotate(1turn);
-	transform: rotate(1turn);
-	
+	  to {
+	   margin-left:0%;
+	   font-size:30px;
+	 }
 }
 
-.loop{
-	-moz-transition: all .6;  
-	-webkit-transition: all .6;  
-	-ms-transition: all .6;
-	transition: all .6; 
-	margin:20px;
-}
-.loop:hover{
+@-moz-keyframes slide {
+	from {
+		margin-left:100%;
+		font-size:20px;
+	  }
 	
-	-moz-transform: rotate3d(1turn);
-	-webkit-transform: rotate3d(1turn);
-	-ms-transform: rotate3d(1turn);
-	transform: rotate3d(1turn);
+	  to {
+	   margin-left:0%;
+	   font-size:30px;
+	 }
+}
+
+@-webkit-keyframes slide{
+	from {
+		margin-left:100%;
+		font-size:20px;
+	  }
+	
+	  to {
+	   margin-left:0%;
+	   font-size:30px;
+	 }
 }
